@@ -22,7 +22,15 @@ bazel build //src/java:deploy
 ```
 
 ## 構造
-- 未記載
+```mermaid
+flowchart TD
+    A[Start] --> B[JAVA]
+    B --> C[JNI]
+    C --> D[C++]
+    C --> E[Rust]
+    C --> F[Rust]
+    F --> G[C++]
+```
 
 ## その他
 
