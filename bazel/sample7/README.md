@@ -24,12 +24,18 @@ bazel build //src/java:deploy
 ## 構造
 ```mermaid
 flowchart TD
-    A[Start] --> B[JAVA]
-    B --> C[JNI]
-    C --> D[C++]
-    C --> E[Rust]
-    C --> F[Rust]
-    F --> G[C++]
+    A{Start} --> B["JAVA
+        ./src/java"]
+    B --> C["JNI
+        ./src/jni"]
+    C --> D["C++
+        ./src/lib/cpp/cpp_animal.cpp"]
+    C --> E["Rust
+        ./src/lib/rust/country"]
+    C --> F["Rust
+        ./src/lib/rust/call_cpp_os"]
+    F --> G["C++
+        ./src/lib/cpp/cpp_os.cpp"]
 ```
 
 ## その他
